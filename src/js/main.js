@@ -6,6 +6,8 @@ $(document).ready(function() {
         infinite: false,
         speed: 300,
         slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 2000,
         responsive: [
             {
               breakpoint: 1024,
@@ -13,21 +15,28 @@ $(document).ready(function() {
                 slidesToShow: 3,
                 slidesToScroll: 3,
                 infinite: true,
-                dots: true
+                dots: false,
+                arrows: false,
               }
             },
             {
               breakpoint: 600,
               settings: {
                 slidesToShow: 2,
-                slidesToScroll: 2
+                slidesToScroll: 2,
+                autoplay: true,
+                autoplaySpeed: 2000,
+                dots: false,
+                arrows: false,
               }
             },
             {
               breakpoint: 480,
               settings: {
                 slidesToShow: 1,
-                slidesToScroll: 1
+                slidesToScroll: 1,
+                dots: false,
+                arrows: false,
               }
             }
         ]
