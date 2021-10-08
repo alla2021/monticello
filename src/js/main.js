@@ -45,3 +45,13 @@ $(document).ready(function() {
     })
 })
 
+
+
+function initMap() {
+  new google.maps.Map(document.getElementById("map"), {
+    mapId: '078384c4f8f2ab',
+    center: { lat: 48.85, lng: 2.35 },
+    zoom: 12,
+  });
+
+
