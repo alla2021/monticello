@@ -48,7 +48,6 @@
     display: flex;
   justify-content: center;
  }
- 
 
   @include breakpoint($mobile-bp) {
     display: flex;
