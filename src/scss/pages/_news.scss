@@ -40,14 +40,13 @@
 
   &__content {
     padding-left: 10px;
-
   }
 
   &__author {
     color: $dark-blue;
     padding: 0 0 30px 20px;
     display: flex ;
- 
+
   }
 
   &__name {
@@ -62,9 +61,7 @@
     display: block;
     font-size: 14px;
     color: $blue;
-
   }
-
 }
 
 .wrapper{
@@ -108,13 +105,14 @@
 
   .slick-arrow.slick-prev {
     left: 0;
-    background-image: url('src/image/News/ltft.png') 0 0 / 100% no-repeat;
+    background: url('../../image/News/L.svg') 0 0 / 100% no-repeat;
   }
 
   .slick-arrow.slick-next {
-    right: 0;
-    background-image: url('src/image/News/right.png') 0 0 / 100% no-repeat;
+    right: 30px;
+    background: url('../../image/News/R.svg') 0 0 / 100% no-repeat;
   }
+
   .slick-dots {
     display: flex;
     align-items: center;
@@ -141,7 +139,16 @@
   .slider__item img{
     max-width: 100%;
   }
-
-
-
 }
+// .btn {
+//   position:absolute;
+//   cursor: pointer;
+// }
+
+// .prev-btn {
+//   left: 30px;
+// }
+
+// .next-btn {
+//   right: 30px;
+// }

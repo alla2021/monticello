@@ -16,18 +16,19 @@
     color: $dark-blue;
     position: absolute;
     bottom: -160px;
-    right: 27%;
-  }
+    right: 23%;
 
-  &__map-holder {
-    position: relative;
-  }
-  
-  &__map {
-    position: absolute;
-    max-width: 1600px;
-    width: 100%;
-    bottom: 0;
+    @include breakpoint($tablet-bp) {
+      position: absolute;
+      bottom: -160px;
+      right: 0;
+   }
+
+    @include breakpoint($mobile-bp) {
+      position: relative;
+      min-height: 355px;
+      
+    }
   }
 
   &__title {
@@ -41,13 +42,24 @@
     display: flex;
     justify-content: space-between;
     padding: 50px 0 0;
+
+    @include breakpoint($tablet-bp) {
+      display: flex;
+      justify-content: center;
+   }
+
+    @include breakpoint($mobile-bp) {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      padding-bottom: 10px;
+    }
   }
 
   &__form {
     display: flex;
     flex-direction: column;
     width: 50%;
-
   }
 
   &__item {
@@ -65,7 +77,6 @@
     color: $dark-blue;
     background-color: transparent;
     margin-bottom: 30px;
-   
       
       &:focus {
         border-bottom: 1px solid #2c4058;
@@ -95,7 +106,6 @@
       color: $blue;
     }
   }
-
 }
 
 

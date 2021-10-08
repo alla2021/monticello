@@ -17,7 +17,19 @@
   &__row {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     margin-bottom: 40px;
+
+    @include breakpoint($tablet-bp) {
+      display: flex;
+      justify-content: center;
+   }
+
+    @include breakpoint($mobile-bp) {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+    }
   }
 
   &__list {
@@ -29,6 +41,19 @@
   border-radius: 50%;
   padding: 15px;
   margin-right: 20px;
+}
+
+&__holder {
+  @include breakpoint($tablet-bp) {
+    display: flex;
+  justify-content: center;
+ }
+
+  @include breakpoint($mobile-bp) {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+  }
 }
 
 &__icon {

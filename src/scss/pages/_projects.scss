@@ -52,6 +52,7 @@
     @include breakpoint($mobile-bp) {
       padding: 10px;
     }
+    
     &_text-right {
       max-width: 385px;
       width: 100%;

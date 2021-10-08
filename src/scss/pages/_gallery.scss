@@ -1,33 +1,42 @@
 .gallery {
   min-height: 1000px;
-  text-align: center;
+  font-family: $gotham-book;
+
+  &__title-holder {
+    min-height: 313px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+  }
   
-    &__title-holder {
-
-    }
-
   &__title {
     font-size: 44px;
+    color: $dark-blue;
+
   }
     
   &__row {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
     margin-bottom: 20px;
 }
 
-&__column {
-
-  &_big {
-    max-width: 50%;
-  }
-
+&__column {   
   &_small {
-    max-width: 25%;
+    display: flex;
+    flex-wrap: wrap;
   }
 }
 
+&__item-img-big {
+  width: 570px;
+  height: 437px;
+}
 
-
+&__item-img {
+  max-width: 285px;
+  width: 100%;
+}
 }
