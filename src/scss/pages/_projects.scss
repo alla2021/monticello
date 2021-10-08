@@ -1,0 +1,149 @@
+.projects {
+  min-height: 950px;
+  font-family: $gotham-reg;
+
+  &__title {
+    min-height: 273px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    font-size: 44px;
+
+    @include breakpoint($tablet-bp) {
+      text-align: center;
+      min-height: 190px;
+   }
+
+    @include breakpoint($mobile-bp) {
+      font-size: 38px;
+      min-height: 100px;
+    }
+}
+  &__row {
+    min-height: 680px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include breakpoint($tablet-bp) {
+      display: flex;
+      min-height: auto;
+      justify-content: center;
+      padding: 20px 0 ;
+   }
+
+    @include breakpoint($mobile-bp) {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      min-height: auto;
+      justify-content: center;
+    }
+  }
+  
+  &__column {
+
+    @include breakpoint($tablet-bp) {
+      padding: 10px;
+   }
+
+    @include breakpoint($mobile-bp) {
+      padding: 10px;
+    }
+    &_text-right {
+      max-width: 385px;
+      width: 100%;
+      color: $gray;
+    }
+    &_image-left {
+      width: 630px;
+      height: 475px;
+      position: relative;
+
+      &:before {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        background-color: $blue;
+        top: -70px;
+        left: -244px;
+        width: 100%;        
+        height: 475px;
+        display: block;
+
+        @include breakpoint($laptop) {
+          display: none;
+       }
+
+        @include breakpoint($tablet-bp) {
+          display: none;
+       }
+    
+        @include breakpoint($mobile-bp) {
+          display: none;
+        }
+    }
+    }
+
+    &_text-left {
+      max-width: 385px;
+      width: 100%;
+      color: $gray;
+    }
+
+    &_image-right {
+      width: 630px;
+      height: 475px;
+      position: relative;
+
+      &:after {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        background-color: $purple;
+        top: -70px;
+        left: 233px;
+        width: 100%;        
+        height: 475px;
+        display: block;
+
+        @include breakpoint($tablet-bp) {
+          display: none;
+       }
+    
+        @include breakpoint($mobile-bp) {
+          display: none;
+        }
+    }
+    }
+  }
+
+  &__description {
+    font-size: 22px;
+    color: $dark-blue;
+    text-transform: uppercase;
+  }
+
+  &__subtitle {
+    font-size: 44px;
+    color: $dark-blue;
+    text-transform: uppercase;
+    padding-bottom: 40px;
+  }
+
+  &__text {
+    line-height: 1.6em;
+    padding-bottom: 40px;
+  }
+
+  &__address {
+    color: $dark-blue;
+    font-size: 18px;
+  }
+
+  &__btn {
+    margin-bottom: 50px;
+  }
+}

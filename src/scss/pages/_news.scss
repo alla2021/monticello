@@ -1,0 +1,128 @@
+.news {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 1030px;
+  color: $white;
+  font-family: $gotham-book;
+
+  &__holder {
+    min-height: 250px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    font-size: 44px;
+  }
+  
+  &__item-holder {
+    background-color: $white;
+  }
+
+  &__subtitle {
+    color: $dark-blue;
+    font-family: $gotham-bold;
+    text-transform: uppercase;
+    padding: 30px 10px 30px 20px;
+  }
+
+  &__description {
+    color: $gray;
+  }
+
+  &__title {
+    font-size: 44px;
+  }
+
+  &__author {
+    display: flex;
+  }
+
+  &__name {
+    display: block;
+  }
+  &__date {
+    display: block;
+  }
+
+}
+
+.wrapper{
+	height: 100%;
+	padding: 50px;
+	display: flex;
+	justify-content:center;
+	align-items: center;
+}
+
+.slick-slider{
+	min-width: 0;
+}
+
+.slick-list {
+	overflow: hidden;
+}
+
+.slick-track{
+	display: flex;
+	align-items: flex-start;
+}
+
+.slider {
+  position: relative;
+  padding: 0 70px;
+
+  .slick-track {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  .slick-arrow {
+    position: absolute;
+    top: 50%;
+    z-index: 10;
+    font-size: 0;
+    width: 30px;
+    height: 30px;
+  }
+
+  .slick-arrow.slick-prev {
+    left: 0;
+    background-image: url('src/image/News/ltft.png') 0 0 / 100% no-repeat;
+  }
+
+  .slick-arrow.slick-next {
+    right: 0;
+    background-image: url('src/image/News/right.png') 0 0 / 100% no-repeat;
+  }
+  .slick-dots {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 50px;
+  }
+
+  .slick-dots button {
+    font-size: 0;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin: 0 15px;
+    background-color: transparent;
+  }
+
+  .slick-dots li.slick-active button{
+    background-color: white;
+    border: 1px solid #fff;
+  }
+  .slider__item {
+    padding: 0px 15px;
+  }
+  .slider__item img{
+    max-width: 100%;
+  }
+
+
+
+}

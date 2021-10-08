@@ -1,0 +1,33 @@
+.gallery {
+  min-height: 1000px;
+  text-align: center;
+  
+    &__title-holder {
+
+    }
+
+  &__title {
+    font-size: 44px;
+  }
+    
+  &__row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+&__column {
+
+  &_big {
+    max-width: 50%;
+  }
+
+  &_small {
+    max-width: 25%;
+  }
+}
+
+
+
+}

@@ -1,0 +1,76 @@
+@import 'variable';
+@import 'fonts/fonts';
+@import 'mixins';
+@import 'pages/projects';
+@import 'pages/gallery';
+@import 'pages/contacts';
+@import 'pages/about';
+@import 'pages/news';
+@import 'blocks/header';
+@import 'blocks/footer';
+
+* {
+    box-sizing: border-box
+  }
+  
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+  }
+  
+  h1,
+  h2,
+  h3,
+  h4, 
+  h5,
+  h6,
+  p {
+    margin: 0;
+    padding: 0;
+  }
+  
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+  
+  .container {
+    max-width: 1170px;
+    width: 100%;
+    padding: 0 15px;
+    margin: 0 auto;
+
+  }
+  
+  a {
+    display: block;
+    text-decoration: none;
+    color: white;
+}
+
+h1,
+h2 {
+    text-transform: uppercase;
+}
+
+.button {
+  text-transform: uppercase;
+  border: 1px solid $dark-blue;
+  color: $dark-blue;
+  padding: 19px 42px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+
+  &:hover {
+    cursor: pointer;
+    opacity: 0.8;
+    color: $blue;
+  }
+}
+
+
+
