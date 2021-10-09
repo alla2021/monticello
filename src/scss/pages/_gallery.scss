@@ -83,12 +83,14 @@
       }
   }
 
+  &__column {
+
+  }
+
   &__item-holder {
       display: flex;
       flex-wrap: wrap;
-      flex-direction: column;
-      justify-content: space-between;
-      width: calc(100% / 3);
+      width: 50%;
       padding: 0 10px;
 
       @include breakpoint($tablet-bp) {
