@@ -23,7 +23,7 @@ $(document).ready(function(){
 });
 
 $(document).ready(function () {
-	$("#scroll, #header__nav").on("click", "a", function (event) {
+	$("#header__nav").on("click", "a", function (event) {
 					event.preventDefault();
 					let id = $(this).attr('href'),
 							top = $(id).offset().top;
@@ -35,9 +35,6 @@ $(document).ready(function () {
 	);
 });
 
-
-
-
 function initMap() {
   new google.maps.Map(document.getElementById("map"), {
     center: {lat: 48.43306439179746, lng: 34.84722679687054},
@@ -45,8 +42,6 @@ function initMap() {
 		mapId: '3078384c4f8f2ab9',
   });
 }
-
-
 
 $( document ).ready(function() {
 	$('.js-burger-btn').on('click', function() {
