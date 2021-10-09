@@ -68,7 +68,20 @@
     
     &__nav-item {
         padding: 0 20px;
+        display: flex;
+        align-items: center;
+
+        &:before {
+            content: " ";
+            width: 5px;
+            height: 5px;
+            border: 1px solid white;
+            border-radius: 50%;
+            display: block;
+            margin-right: 4px;
+        }
     }
+    
     &__nav-list {
         display: flex; 
         align-items: center;
