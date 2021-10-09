@@ -15,7 +15,7 @@
     background-image: url(../image/bg-form.jpg);
     color: $dark-blue;
     position: absolute;
-    bottom: 0px;
+    bottom: -140px;
     right: 30%;
 
     @include breakpoint($tablet-bp) {
