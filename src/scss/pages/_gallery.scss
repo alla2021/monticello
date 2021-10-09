@@ -37,12 +37,6 @@
       margin-bottom: 20px;
   }
 
-  // &__holder {
-  //     display: flex;
-  //     flex-wrap: wrap;
-  //     width: 100%;
-  // }
-
   &__item {
       padding: 0 10px;
       margin-bottom: 30px;
@@ -66,18 +60,22 @@
       }
 
       &_small {
-          height: 212px;
-          padding: 0;
+        width: calc(100% - (100% / 2));
+        height: 212px;
+        max-width: 100%;
+        padding: 0 5px ;
+        margin: 0;
 
           @include breakpoint($tablet-bp) {
               height: 180px;
               width: 50%;
-              padding: 0 10px;
+              padding: 0 10px ;
           }
       
           @include breakpoint($mobile-bp) {
               height: 230px;
               width: 75%;
+              padding: 0 10px 10px;
           }
       }
   }
