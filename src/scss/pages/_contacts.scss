@@ -35,12 +35,6 @@
     color: $dark-blue;
     text-align: center;
     font-family: $gotham-reg;
-
-    &:before {
-      content: " ";
-      width: 20px;
-      border: 1px solid black;
-    }
   }
 
   &__wrapper {

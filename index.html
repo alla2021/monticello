@@ -12,32 +12,55 @@
     <title>Monticello</title>
 </head>
 <body>
-    <!-- <header>
-        <section class="menu">
-            <div class="container">
-                <div class="menu__holder">
-                <div class="menu__logo"><a href="#"><img src="src/image/logo.png" alt=""></a></div>
-                <nav class="menu__nav">
-                    <ul class="menu__list-menu">
-                        <li class="menu__list-item "><div class="menu__point"></div><a href="#" class="menu__list-item-link">About us</a></li>
-                        <li class="menu__list-item"><div class="menu__point"></div><a href="#projects" class="menu__list-item-link">Projects</a></li>
-                        <li class="menu__list-item"><div class="menu__point"></div><a href="#news" class="menu__list-item-link">News</a></li>
-                        <li class="menu__list-item"><div class="menu__point"></div><a href="#contacts" class="menu__list-item-link">contacts</a></li>
+    <header class="header js-header">
+        <div class="container">
+            <div class="header__holder ">
+                <a href="#" class="header__logo">
+                    <img src="src/image/logo.svg" alt="logo">
+                </a>
+                <nav class="header__nav js-nav-menu">
+                    <ul class="header__nav-list">
+                        <li class="header__nav-item">
+                            <a href="#" class="header__nav-link">ABOUT</a>
+                        </li>
+                        <li class="header__nav-item">
+                            <a href="#" class="header__nav-link">project</a>
+                        </li>
+                        <li class="header__nav-item">
+                            <a href="#" class="header__nav-link">News</a>
+                        </li>
+                        <li class="header__nav-item">
+                            <a href="#" class="header__nav-link">CONTACT</a>
+                        </li>
                     </ul>
                 </nav>
-                <div class="menu__social-links">
-                    <ul class="menu__list">
-                        <li><a class="menu__item" href="#"><i class="menu__icon fab fa-facebook"></i></a></li>
-                        <li><a class="menu__item" href="#"><i class="menu__icon fab fa-twitter"></i></span></a></li>
-                        <li><a class="menu__item" href="#"><i class="menu__icon fab fa-instagram"></i></a></li>
+                <button class="burger-btn js-burger-btn">
+                    <span></span>
+                </button>
+                <div class="header__social-links">
+                    <ul class="header__list">
+                        <li><a class="header__item" href="#"><i class="footer__icon fab fa-facebook"></i></a></li>
+                        <li><a class="header__item" href="#"><i class="footer__icon fab fa-twitter"></i></span></a></li>
+                        <li><a class="header__item" href="#"><i class="footer__icon fab fa-instagram"></i></a></li>
                     </ul>
                 </div>
             </div>
-            </div>
-        </section>
-    </header> -->
+        </div>
+    </header>
     <main>
-<!-- 
+        <!-- <section class="about" style="background-image: url('src/image/bg-about.jpg');">
+                <div class="container">
+                    <div class="about__wrapper">
+                        <div class="slider">
+                            <h1 class="about__title">Simple & modern</h1>
+                            <strong class="about__text">We make the world's beautiful every day</strong>
+                        </div>
+                    </div>  
+                </div>
+                <div class="about__scroll-holder"><img src="src/image/scroll.png" alt=""></div>
+        </section> -->
+ 
+<!--  
         <section class="about-us" id="about-us" style="background-image: url('src/image/bg-about.jpg');">
             <div class="container">
                 <div class="slider js-slider">
@@ -63,7 +86,7 @@
                     </div>
                 </div>
             </div>
-        </section> -->
+        </section>  -->
 
 
         <!-- <section class="projects" id="projects">
@@ -94,105 +117,74 @@
                     </div>
                 </div>
             </div>
-        </section> -->
+        </section>  -->
 
-<!-- 
-        <section class="news" id="news" style="background-image: url('src/image/News/bg-news.jpg');">
-            <div class="container">
-                <div class="news__holder">
-                    <h2 class="news__title">Latest news</h2>
-                </div>
-                <div class="wrapper">
+       <!-- <section class="news">project
+           <div class="container">
+               <h2 class="news__title">Latest news</h2>
+               <div class="news__wrapper">
                 <div class="slider">
-                    <div class="slider__item">
-                        <div class="news__item-holder">
-                            <div class="news__img-holder">
-                                <img src="src/image/News/news-1.jpg" alt="building">
-                            </div>
+                    <div class="slider__item filter">
+                        <img src="src/image/News/news-2.png" alt="news">
+                        <div class="news__content">
                             <div class="news__subtitle">See The Unmatched Beauty Of The Great.</div>
                             <div class="news__description">Free directories: directories are perfect for customers that are... </div>
                             <div class="news__author">
-                                <div class="news__icon-photo"><img src="src/image/News/photos-13323rs3Du9xyQ3KR.png" alt="author"></div>
-                                <div class="news__content">
-                                    <span class="news__name">Isaac Dunn</span>
-                                    <span class="news__date">09 Feb 2017</span>
-                                </div>                            </div>
-                        </div>
-                    </div>
-                    <div class="slider__item">
-                        <div class="news__item-holder">
-                            <div class="news__img-holder">
-                                <img src="src/image/News/news-2.png" alt="building">
-                            </div>
-                            <div class="news__subtitle">Effective Advertising Pointers.</div>
-                            <div class="news__description">Free directories: directories are perfect for customers that are... </div>
-                            <div class="news__author">
-                                <div class="news__icon-photo"><img src="src/image/News/photos-13323TAfapiSrc9IO.png" alt="author"></div>
-                                <div class="news__content">
-                                    <span class="news__name">Dominic Freeman</span>
-                                    <span class="news__date">24 Apr 2017</span>
-                                </div>                            
+                                    <div class="news__icon-photo"><img src="src/image/News/photos-13323rs3Du9xyQ3KR.png" alt="author"></div>
+                                    <div class="slider__publication">
+                                            <span class="news__name">Isaac Dunn</span>
+                                            <span class="news__date">09 Feb 2017</span>
+                                    </div>  
                             </div>
                         </div>
                     </div>
                     <div class="slider__item">
-                        <div class="news__item-holder">
-                            <div class="news__img-holder">
-                                <img src="src/image/News/news-3.png" alt="building">
-                            </div>
-                            <div class="news__subtitle">Hypnotize Yourself Into The Ghost.</div>
-                            <div class="news__description">Free directories: directories are perfect for customers that are... </div>
-                            <div class="news__author">
-                                <div class="news__icon-photo"><img src="src/image/News/photos-13323vsWmKApDZJIh.png" alt="author"></div>
-                                <div class="news__content">
-                                    <span class="news__name">Alice Ward</span>
-                                    <span class="news__date">30 Dec 2017</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="slider__item">
-                        <div class="news__item-holder">
-                            <div class="news__img-holder">
-                                <img src="src/image/News/news-2.png" alt="building">
-                            </div>
+                        <img src="src/image/News/news-2.png" alt="news">
+                        <div class="news__content">
                             <div class="news__subtitle">See The Unmatched Beauty Of The Great.</div>
                             <div class="news__description">Free directories: directories are perfect for customers that are... </div>
                             <div class="news__author">
-                                <div class="news__icon-photo"><img src="src/image/News/photos-13323rs3Du9xyQ3KR.png" alt="author"></div>
-                                <div class="news__content">
-                                    <span class="news__name">Isaac Dunn</span>
-                                    <span class="news__date">09 Feb 2017</span>
-                                </div>
+                                    <div class="news__icon-photo"><img src="src/image/News/photos-13323rs3Du9xyQ3KR.png" alt="author"></div>
+                                    <div class="slider__publication">
+                                            <span class="news__name">Isaac Dunn</span>
+                                            <span class="news__date">09 Feb 2017</span>
+                                    </div>  
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slider__item filter">
+                        <img src="src/image/News/news-2.png" alt="news">
+                        <div class="news__content">
+                            <div class="news__subtitle">See The Unmatched Beauty Of The Great.</div>
+                            <div class="news__description">Free directories: directories are perfect for customers that are... </div>
+                            <div class="news__author">
+                                    <div class="news__icon-photo"><img src="src/image/News/photos-13323rs3Du9xyQ3KR.png" alt="author"></div>
+                                    <div class="slider__publication">
+                                            <span class="news__name">Isaac Dunn</span>
+                                            <span class="news__date">09 Feb 2017</span>
+                                    </div>  
                             </div>
                         </div>
                     </div>
                     <div class="slider__item">
-                        <div class="news__item-holder">
-                            <div class="news__img-holder">
-                                <img src="src/image/News/news-3.png" alt="building">
-                            </div>
+                        <img src="src/image/News/news-2.png" alt="news">
+                        <div class="news__content">
                             <div class="news__subtitle">See The Unmatched Beauty Of The Great.</div>
                             <div class="news__description">Free directories: directories are perfect for customers that are... </div>
                             <div class="news__author">
-                                <div class="news__icon-photo"><img src="src/image/News/photos-13323rs3Du9xyQ3KR.png" alt="author"></div>
-                                <div class="news__content">
-                                    <span class="news__name">Isaac Dunn</span>
-                                    <span class="news__date">09 Feb 2017</span>
-                                </div>
+                                    <div class="news__icon-photo"><img src="src/image/News/photos-13323rs3Du9xyQ3KR.png" alt="author"></div>
+                                    <div class="slider__publication">
+                                            <span class="news__name">Isaac Dunn</span>
+                                            <span class="news__date">09 Feb 2017</span>
+                                    </div>  
                             </div>
                         </div>
                     </div>
-                    <div class="btn prev-btn">
-                        <img src="src/image/News/L.svg" alt="">
-                      </div>
-                      <div class="btn next-btn">
-                        <img src="src/image/News/R.svg" alt="">
-                      </div>
-                </div>
                 </div>
             </div>
+        </div>
         </section> -->
+       
 
         <section class="gallery">
             <div class="container">
@@ -213,9 +205,9 @@
                 <a href="#" class="gallery__btn button">VIEW MORE</a>
             </div>
         </section>
-        <section>
-            <div class="contacts__map">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d17099.782911100807!2d30.573478217292198!3d50.42438100696731!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4c58475bfb78f%3A0x59624047822ecbc7!2sNew%20Darnytskyi%20Bridge!5e0!3m2!1sen!2sua!4v1633687428319!5m2!1sen!2sua"  height="700" style="width: 100%; border: none; font-size: 0; line-height: 0; padding: 0; margin: 0;" allowfullscreen="" loading="lazy"></iframe>
+        <section class="map">
+            <div id="map"></div>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d17099.782911100807!2d30.573478217292198!3d50.42438100696731!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4c58475bfb78f%3A0x59624047822ecbc7!2sNew%20Darnytskyi%20Bridge!5e0!3m2!1sen!2sua!4v1633687428319!5m2!1sen!2sua"  height="700" style="width: 100%; border: none; font-size: 0; line-height: 0; padding: 0; margin: 0;" allowfullscreen="" loading="lazy"></iframe>
             </div>
         </section>
         <section class="contacts">
@@ -269,10 +261,11 @@
         </div>
         </section>
     </footer> 
-
-        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC5GbP02MTWyY_dNOPgIJcDitWWhHYh8ZE&callback=initMap"></script>
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBlm9M7yI2ZCRv3RcUWOPcSeNR-QXBlcP0&callback=initMap"></script>
         <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
         <script src="src/js/slick.min.js"></script>
         <script src="src/js/main.js"></script>
 </body>
 </html>
+
+    
