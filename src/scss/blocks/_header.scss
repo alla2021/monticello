@@ -109,7 +109,10 @@
       padding: 15px;
       margin-right: 20px;
     }
-
+    &__icon {
+        color: $white;
+        font-size: 18px;
+      }
 
     &__link {
         padding: 20px 0;
