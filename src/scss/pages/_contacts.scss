@@ -16,7 +16,7 @@
     color: $dark-blue;
     position: absolute;
     bottom: -160px;
-    right: 23%;
+    right: 30%;
 
     @include breakpoint($tablet-bp) {
       position: absolute;
@@ -27,7 +27,6 @@
     @include breakpoint($mobile-bp) {
       position: relative;
       min-height: 355px;
-      
     }
   }
 
@@ -36,6 +35,12 @@
     color: $dark-blue;
     text-align: center;
     font-family: $gotham-reg;
+
+    &:before {
+      content: " ";
+      width: 20px;
+      border: 1px solid black;
+    }
   }
 
   &__wrapper {
