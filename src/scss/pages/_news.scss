@@ -122,6 +122,7 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	flex-direction: row;
 }
 .slider .slick-dots li{
 	list-style: none;
@@ -131,12 +132,12 @@
 	font-size: 0;
 	width: 10px;
 	height: 10px;
-	background-color: #fff;
+	background-color: transparent;
 	border-radius: 50%;
 }
 
 .slider .slick-dots li.slick-active button{
-	background-color: transparent;
+	background-color: #fff;
 	border: 1px solid #fff;
 }
 
@@ -146,7 +147,5 @@
 .slider__item img{
 	max-width: 100%;
 }
-.slider__item.slick-center{
-	
-}
+
 }
