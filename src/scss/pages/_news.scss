@@ -9,27 +9,19 @@
   color: $white;
   font-family: $gotham-book;
 
-	&__title-holder {
-      max-height: 300px;
-	}
+	&__title {
+		font-size: 44px;
+		}
 
-&__title {
-  font-size: 44px;
-  }
+	&__wrapper{
+		height: 100%;
+		padding: 50px;
+		display: flex;
+		justify-content:center;
+		align-items: center;
+		}
 
-&__wrapper{
-    height: 100%;
-    padding: 50px;
-    display: flex;
-    justify-content:center;
-    align-items: center;
-  }
-  
-  @media (max-width:767px){
-    .wrapper{padding: 50px 10px;}
-  }
-
-    &__holder {
+    &__title-holder {
     min-height: 250px;
     display: flex;
     text-align: center;
@@ -39,30 +31,71 @@
     font-size: 44px;
   }
 
-
-.slick-slider{
-	min-width: 0;
-}
-
-.slick-list {
-	overflow: hidden;
-}
-
-.slick-track{
-	display: flex;
-	align-items: flex-start;
-}
-
-.slider {
-	position: relative;
-	padding: 0px 60px;
-}
-
-@media (max-width:767px){
-	.slider {
-		padding: 0px 40px;
+	&__slider-item {
+		max-width: 370px;
+		width: 100%;
+    text-align: center;
+		background-color: white;
+		color: $dark-blue;
+		line-height: 1.6em;
+		text-align: left;
 	}
-}
+
+	&__subtitle {
+		text-transform: uppercase;
+		font-size: 22px;
+		font-family: $gotham-bold;
+		text-align: left;
+		padding-bottom: 15px;
+	}
+
+	&__description {
+		font-size: 18px;
+		color: $gray;
+		padding-bottom: 35px;
+	}
+
+	&__content {
+		padding: 25px 5px 5px 10px;
+	}
+
+	&__author {
+		display: flex;
+	}
+
+	&__publication {
+		display: flex;
+		flex-direction: column;
+		padding-left: 15px;
+	}
+
+	&__name {
+		text-transform: uppercase;
+		font-size: 18px;
+	}
+
+	&__date {
+		font-size: 14px;
+		color: $blue;
+	}
+
+	.slick-slider{
+		min-width: 0;
+	}
+
+	.slick-list {
+		overflow: hidden;
+	}
+
+	.slick-track{
+		display: flex;
+		align-items: flex-start;
+	}
+
+	.slider {
+		position: relative;
+		padding: 0px 60px;
+	}
 
 .slider .slick-arrow{
 	position: absolute;
