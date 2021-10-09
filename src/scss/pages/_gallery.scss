@@ -47,7 +47,7 @@
 
       &_big {
           width: calc(100% - (100% / 2));
-          height: 436px;
+          height: 450px;
 
           @include breakpoint($tablet-bp) {
               width: 75%;
