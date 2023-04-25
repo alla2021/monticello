@@ -1,78 +1,124 @@
 .footer {
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  min-height: 520px;
-  display: flex;
-  align-items: center;
-  color: $white;
-  font-family: $gotham-book;
+   display:flex;
+   align-items: center;
+   justify-content: center;
+   background-image: url('../../../../dist/assets/image/Bg-footer.png');
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-position: center;
+   min-height: 500px;
+   display: flex;
+   align-items: center;
+   color: $white;
 
-  &__wrapper {
-    margin: 0 auto;
-    max-width: 850px;
-    width: 100%;
-  }
-  
-  &__row {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    margin-bottom: 40px;
-
-    @include breakpoint($tablet-bp) {
+   &__wrapper {
+      margin: 0 auto;
+      max-width: 850px;
+      width: 100%;
       display: flex;
-      justify-content: center;
+      flex-direction: column;
+      justify-content: space-between;
+
+      @include breakpoint($tablet-bp) {
+         width: 90%;
+      }
+
+      @include breakpoint($mobile-bp) {
+         width: 90%;
+      }
    }
 
-    @include breakpoint($mobile-bp) {
+   &__row {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      margin-bottom: 40px;
+
+      @include breakpoint($tablet-bp) {
+         display: flex;
+         justify-content: center;
+      }
+
+      @include breakpoint($mobile-bp) {
+         display: flex;
+         justify-content: center;
+         flex-direction: column;
+      }
+   }
+
+   &__holder {
+      text-align: center;
       display: flex;
       justify-content: center;
-      flex-direction: column;
-    }
-  }
 
-  &__list {
-    display: flex;
-  }
+      span {
+         display: block;
+      }
 
-&__item {
-  border: 1px solid $white;
-  border-radius: 50%;
-  padding: 15px;
-  margin-right: 20px;
-}
+      @include breakpoint($tablet-bp) {
+         display: flex;
+         justify-content: center;
+      }
 
-&__holder {
-  @include breakpoint($tablet-bp) {
-    display: flex;
-  justify-content: center;
- }
+      @include breakpoint($mobile-bp) {
+         display: flex;
+         justify-content: space-between;
+         flex-direction: column;
+      }
+   }
 
-  @include breakpoint($mobile-bp) {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-  }
-}
+   &__social-links{
+      color: $white;
+      font-size: 30px;
+      display: flex;
+      justify-content: center;
+      margin: 30px 0;
 
-&__icon {
-  color: $white;
-  font-size: 18px;
-}
+      li {
+         padding: 0 10px;
+      }
+   }
 
-&__copy {
-  padding-right: 10px;
-  border-right: 1px solid $white;
-}
+   &__logo{
+      @include breakpoint($tablet-bp) {
+         margin: 0 auto;
+      }
 
-&__author {
-  padding-left: 10px;
-}
+      @include breakpoint($mobile-bp) {
+         margin: 0 auto;
+      }
+   }
 
-&__author-link {
-  display: inline;
-  color: $white;
-}
+   li{
+      border:1px solid $white;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      margin: 0 10px;
+
+   }
+
+   &__icon {
+   color: $white;
+   font-size: 18px;
+
+   &:hover{
+      color:$purple;
+   }
+   }
+
+   &__copy {
+   padding-right: 10px;
+   border-right: 1px solid $white;
+   }
+
+   &__author {
+   padding-left: 10px;
+   }
+
+   &__author-link {
+   display: inline;
+   color: $white;
+   }
 }
 

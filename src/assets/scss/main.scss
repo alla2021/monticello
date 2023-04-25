@@ -1,15 +1,16 @@
-@import 'variable';
-@import 'fonts/fonts';
-@import 'fonts/icons';
-@import 'mixins';
-@import 'pages/projects';
-@import 'pages/gallery';
-@import 'pages/contacts';
-@import 'pages/about';
-@import 'pages/news';
-@import 'pages/map';
-@import 'blocks/header';
-@import 'blocks/footer';
+@import './variable';
+@import './mixins';
+@import './fonts/fonts';
+@import './fonts/icons';
+
+@import './pages/projects';
+@import './pages/gallery';
+@import './pages/contacts';
+@import './pages/about';
+@import './pages/news';
+@import './pages/map';
+@import './blocks/header';
+@import './blocks/footer';
 
 * {
     box-sizing: border-box
