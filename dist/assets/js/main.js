@@ -1,39 +1,14 @@
-$(document).ready(function(){
-	$('.news__slider').slick({
-		arrows:true,
-		dots:true,
-		slidesToShow:3,
-		autoplay:true,
-		autoplaySpeed:4000,
-		responsive:[
-			{
-				breakpoint: 768,
-				settings: {
-					slidesToShow:2
-				}
-			},
-			{
-				breakpoint: 550,
-				settings: {
-					slidesToShow:1
-				}
-			}
-		]
-	});
-});
+import Swiper from "swiper";
 
-$(document).ready(function () {
-	$("#scroll, #header__nav").on("click", "a", function (event) {
-					event.preventDefault();
-					let id = $(this).attr('href'),
-							top = $(id).offset().top;
-					$('body,html').animate({
-									scrollTop: top
-							}
-							, 1000);
-			}
-	);
+var mySwiper = new Swiper('.slider', {
+	slidesPerView: 1,
+	loop: true,
+	autoplay: {
+		delay: 1000,
+	},
+	speed: 1000,
 });
+mySwiper.update();
 
 function initMap() {
   new google.maps.Map(document.getElementById("map"), {

@@ -24,6 +24,7 @@
   },
   "dependencies": {
     "@glidejs/glide": "^3.6.0",
-    "eslint": "^8.31.0"
+    "eslint": "^8.31.0",
+    "swiper": "^9.2.4"
   }
 }
