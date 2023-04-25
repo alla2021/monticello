@@ -43,12 +43,12 @@ function initMap() {
   });
 }
 
-$( document ).ready(function() {
-	$('.js-burger-btn').on('click', function() {
-			if($('.js-header').hasClass('active')) {
-					$('.js-header').removeClass('active');
-			} else {
-					$('.js-header').addClass('active');
-			}
-	})
+document.addEventListener('DOMContentLoaded', function() {
+	var burgerButton = document.querySelector('.js-burger-btn');
+	var header = document.querySelector('.js-header');
+
+	burgerButton.addEventListener('click', function() {
+		header.classList.toggle('active');
+	});
 });
+
