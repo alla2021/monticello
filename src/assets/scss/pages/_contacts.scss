@@ -14,19 +14,15 @@
     background-position: center;
     background-image: url('../../../../dist/assets/image/bg-form.jpg');
     color: $dark-blue;
-    position: absolute;
-    bottom: -140px;
-    right: 25%;
-  
-      @include breakpoint($tablet-bp) {
-        position: absolute;
-        bottom: -160px;
-        right: 0;
-    }
+    position: absolute; 
+    left: 0; 
+    right: 0; 
+    top:-320px;
+    margin-left: auto; 
+    margin-right: auto; 
   
     @include breakpoint($mobile-bp) {
-      position: relative;
-      min-height: 355px;
+      padding: 20px;
     }
   }
   
@@ -61,6 +57,7 @@
     @include breakpoint($tablet-bp) {
       display: flex;
       justify-content: center;
+
     }
   
     @include breakpoint($mobile-bp) {

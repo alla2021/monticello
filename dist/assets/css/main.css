@@ -1,13 +1,13 @@
 @font-face {
     font-family: "Roboto Medium";
-    src: url("../../fonts/Roboto-Medium.eot");
-    src: url("../../fonts/Roboto-Medium.eot?#iefix") format("embedded-opentype"), url("../../fonts/Roboto-Medium.woff2") format("woff2"), url("../../fonts/Roboto-Medium.woff") format("woff"), url("../../fonts/Roboto-Medium.ttf") format("truetype"), url("../../fonts/Roboto-Medium.svg#Roboto Medium") format("svg");
+    src: url("../../../../dist/assets/fonts/Roboto-Medium.eot");
+    src: url("../../../../dist/assets/fonts/Roboto-Medium.eot?#iefix") format("embedded-opentype"), url("../../../../dist/assets/fonts/Roboto-Medium.woff2") format("woff2"), url("../../../../dist/assets/fonts/Roboto-Medium.woff") format("woff"), url("../../../../dist/assets/fonts/Roboto-Medium.ttf") format("truetype"), url("../../../../dist/assets/fonts/Roboto-Medium.svg#Roboto Medium") format("svg");
 }
 
 @font-face {
     font-family: "Roboto Regular";
-  src: url("../../fonts/Roboto-Black.eot");
-  src: url("../../fonts/Roboto-Black.eot?#iefix") format("embedded-opentype"), url("../../fonts/Roboto-Regular.woff2") format("woff2"), url("../../fonts/Roboto-Regular.woff") format("woff"), url("../../fonts/Roboto-Regular.ttf") format("truetype"), url("../../fonts/Roboto-Regular.svg#Roboto Black") format("svg");
+  src: url("../../../../dist/assets/fonts/Roboto-Black.eot");
+  src: url("../../../../dist/assets/fonts/Roboto-Black.eot?#iefix") format("embedded-opentype"), url("../../../../dist/assets/fonts/Roboto-Regular.woff2") format("woff2"), url("../../../../dist/assets/fonts/Roboto-Regular.woff") format("woff"), url("../../../../dist/assets/fonts/Roboto-Regular.ttf") format("truetype"), url("../../../../dist/assets/fonts/Roboto-Regular.svg#Roboto Black") format("svg");
 }
 
 @font-face {
@@ -47,6 +47,7 @@
 
 .projects {
     min-height: 950px;
+    position: relative;
 }
 
 .projects__title {
@@ -69,7 +70,7 @@
 @media screen and (max-width: 769px) {
     .projects__title {
         font-size: 38px;
-        min-height: 100px;
+        in-height: 100px;
     }
 }
 
@@ -99,8 +100,11 @@
     }
 }
 
-.projects__column {
-    width: 50%;
+.projects__column img {
+    max-width: 630px;
+    width: 100%;
+    max-height: 475px;
+    height: 100%;
 }
 
 @media screen and (max-width: 990px) {
@@ -121,20 +125,14 @@
     color: #4b5562;
 }
 
-.projects__column_image-left {
-    width: 630px;
-    height: 475px;
-    position: relative;
-}
-
 .projects__column_image-left:before {
     content: "";
     position: absolute;
     z-index: -1;
     background-color: #55b7ff;
-    top: -70px;
-    left: -244px;
-    width: 100%;
+    top: 15%;
+    left: 0px;
+    width: 630px;
     height: 475px;
     display: block;
 }
@@ -159,14 +157,7 @@
 
 .projects__column_text-left {
     max-width: 385px;
-    width: 100%;
     color: #4b5562;
-}
-
-.projects__column_image-right {
-    width: 630px;
-    height: 475px;
-    position: relative;
 }
 
 .projects__column_image-right:after {
@@ -174,9 +165,9 @@
     position: absolute;
     z-index: -1;
     background-color: #7e5aff;
-    top: -70px;
-    left: 233px;
-    width: 100%;
+    bottom: 15%;
+    right: 0px;
+    width: 630px;
     height: 475px;
     display: block;
 }
@@ -370,22 +361,16 @@
     background-image: url("../../../../dist/assets/image/bg-form.jpg");
     color: #2c4058;
     position: absolute;
-    bottom: -140px;
-    right: 25%;
-}
-
-@media screen and (max-width: 990px) {
-    .contacts__block {
-        position: absolute;
-        bottom: -160px;
-        right: 0;
-    }
+    left: 0;
+    right: 0;
+    top: -320px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 @media screen and (max-width: 769px) {
     .contacts__block {
-        position: relative;
-        min-height: 355px;
+        padding: 20px;
     }
 }
 
@@ -541,6 +526,7 @@
 }
 
 .news {
+    background-image: url("../../../../dist/assets/image/News/bg-news.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -556,14 +542,50 @@
     font-size: 44px;
 }
 
-.news__title-holder {
-    min-height: 250px;
+.news__cards-wrapper {
     display: flex;
-    text-align: center;
     align-items: center;
-    justify-content: center;
+}
+
+.news__card {
+    background-color: #fff;
+    color: black;
+    border-radius: 15px;
+    max-width: 350px;
+    margin: 20px;
+}
+
+.news__slider-item img {
+    max-width: 100%;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.news__content {
+    margin-top: 20px;
+}
+
+.news__subtitle {
+    font-size: 22px;
     text-transform: uppercase;
-    font-size: 44px;
+    padding: 10px 20px;
+}
+
+.news__description {
+    padding-top: 10px;
+    margin-bottom: 10px;
+}
+
+.news__author {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.news__name {
+    padding-bottom: 5px;
+    font-weight: 800;
 }
 
 #map {
@@ -800,6 +822,7 @@ html,
 body {
     margin: 0;
     padding: 0;
+    font-family: "Roboto Regular";
 }
 
 h1,
@@ -811,6 +834,15 @@ h6,
 p {
     margin: 0;
     padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Roboto Medium";
 }
 
 ul {
