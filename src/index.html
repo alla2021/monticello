@@ -4,112 +4,110 @@
             <meta charset="UTF-8">
             <meta http-equiv="X-UA-Compatible" content="IE=edge">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <link rel="icon" type="image/x-icon" href="../src/assets/image/favicon.ico">
-            <link rel="stylesheet" href="../dist/assets/css/main.css">
+            <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+            <link rel="stylesheet" href="/assets/css/main.css">
             <title>Monticello</title>
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
         </head>
     <body>
-        <!--<header class="header">
+        <header class="header">
             <div class="container">
-                <div class="header__wrapper">
-                    <div class="header__logo-wrapper">
-                        <a href="#" class="header__logo">
-                            <img src="../dist/assets/image/logo.png" alt="logo">
-                        </a>
-                    </div>
-                    <nav class="navbar">
-                        <div class="navbar__container nav-container">
-                            <button class="burger-menu">
-                                <span class="burger-menu__item"></span>
-                                <span class="burger-menu__item"></span>
-                                <span class="burger-menu__item"></span>
-                            </button>
-                            <ul class="navbar__nav-list" id="navbar-nav">
-                                <li class="navbar__nav-item">
-                                    <a href="#" class="navbar__nav-link">ABOUT</a>
-                                </li>
-                                <li class="navbar__nav-item">
-                                    <a href="#project" class="navbar__nav-link">project</a>
-                                </li>
-                                <li class="navbar__nav-item">
-                                    <a href="#news" class="navbar__nav-link">News</a>
-                                </li>
-                                <li class="navbar__nav-item">
-                                    <a href="#contacts" class="navbar__nav-link">CONTACT</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </nav>
-                </div>
-            </div>
-        </header>-->
-        <!--<header class="header js-header">
-            <div class="container">
-                <div class="header__holder">
+            <nav class="header__nav-wrapper">
+                <div class="header__logo-wrapper">
                     <a href="#" class="header__logo">
-                        <img src="../dist/assets/image/logo.png" alt="logo">
+                        <img src="/assets/images/logo.png" alt="logo">
                     </a>
-                    <nav class="header__nav">
-                        <ul class="header__nav-list" id="header__nav">
-                            <li class="header__nav-item">
-                                <a href="#" class="header__nav-link">ABOUT</a>
-                            </li>
-                            <li class="header__nav-item">
-                                <a href="#project" class="header__nav-link">project</a>
-                            </li>
-                            <li class="header__nav-item">
-                                <a href="#news" class="header__nav-link">News</a>
-                            </li>
-                            <li class="header__nav-item">
-                                <a href="#contacts" class="header__nav-link">CONTACT</a>
-                            </li>
-                        </ul>
-                    </nav>
-                    <button class="burger-btn-open">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </button>
-                    <button class="burger-btn-close">
-                        <span></span>
-                        <span></span>
-                    </button>
-                    <div class="header__social-links">
-                        <ul class="header__list">
-                            <li><a class="header__item" href="#"><i class="header__icon fab fa-facebook-f"></i></a></li>
-                            <li><a class="header__item" href="#"><i class="header__icon fab fa-twitter"></i></a></li>
-                            <li><a class="header__item" href="#"><i class="header__icon fab fa-instagram"></i></a></li>
-                        </ul>
-                    </div>
                 </div>
-            </div>
-        </header>-->
-        <!--<main>
+                <div class="hamburger">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </div>
+                <ul class="header__menu menu">
+                    <li><a href="#">ABOUT</a></li>
+                    <li><a href="#project">project</a></li>
+                    <li><a href="#news">news</a></li>
+                    <li><a href="#contacts">Contact</a></li>
+                </ul>
+                <ul class="social-links header__links">
+                    <li><a class="social-links__item" href="#"><span class="fab fa-facebook-f"></span></a></li>
+                    <li><a class="social-links__item" href="#"><span class="fab fa-twitter"></span></a></li>
+                    <li><a class="social-links__item" href="#"><span class="fab fa-instagram"></span></a></li>
+                </ul>    
+            </div>           
+        </header>
+        <main>
             <section class="about">
                 <div class="container">
-                <div class="slider">
-                    <div class="slide">
-                        <h1 class="about__title">Simple & modern</h1>
-                        <strong class="about__text">We make the world's beautiful every day</strong>
-                    </div>
-                    <div class="slide">
-    
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide about__slide">
+                                <h1 class="about__title">Simple & modern</h1>
+                                <strong class="about__text">We make the world's beautiful every day</strong>
+                            </div>
+                            <div class="swiper-slide about__slide">
+                                <h1 class="about__title">Template</h1>
+                                <strong class="about__text">We make the world's beautiful every day</strong>
+                            </div>
+                        </div>
+                        </div>
+                    <div class="about__scroll-holder">
+                        <a href="#project">
+                            <img src="/assets/images/scroll.png" alt="arrow">
+                        </a>
                     </div>
                 </div>
-                <div class="about__scroll-holder">
-                    <a href="#project">
-                        <img src="../dist/assets/image/scroll.png" alt="arrow">
-                    </a>
+            </section>
+            
+            <!--<section class="news">
+                <div class="">
+                   <h2 class="news__title">News</h2>
+                   <div class="swiper-custom-nav-left">
+                      <img class="h-[25px] w-[25px]" src="assets/image/arrows/arrow-button_L.svg" alt="next">
+                   </div>
+                   <div class="swiper-custom-nav-right">
+                      <img class="h-[25px] w-[25px]" src="assets/images/arrows/arrow-button_R.svg" alt="prev">
+                   </div>
+                   <div class="news__cards-wrapper">   
+                      <div class="swiper">                   
+                            <div class="swiper-wrapper">
+
+                                <div class="swiper-slide">
+                                    <div class="news__card">
+                                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rerum, ipsa iste, debitis optio praesentium dolores sit ipsum architecto perferendis culpa ut nostrum voluptas corrupti laboriosam totam adipisci, id enim hic?</p>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="news__card">
+                                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rerum, ipsa iste, debitis optio praesentium dolores sit ipsum architecto perferendis culpa ut nostrum voluptas corrupti laboriosam totam adipisci, id enim hic?</p>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                            </div>
+                            <div class="swiper-pagination"></div>
+                      </div>
+                   </div>
                 </div>
-                </div>-->
-            <!--</section>-->
+          </section>
+
+
+-->
+
+
+
+
+
+
             <section class="projects" id="project">
             <div class="container">
                 <h2 class="projects__title">what we do</h2>
                 <div class="projects__row">
                     <div class="projects__column projects__column_image-left">
                         <div class="projects__img-holder">
-                            <img src="../dist/assets/image/projects/architecture.jpg" alt="architecture"/>
+                            <img src="assets/images/projects/architecture.jpg" alt="architecture"/>
                         </div>
                     </div>
                     <div class="projects__column projects__column_text-right">
@@ -130,16 +128,12 @@
                     </div>
                     <div class="projects__column projects__column_image-right">
                         <div class="projects__img-holder projects__img-holder_right">
-                            <img src="../src/assets/image/projects/building.jpg" alt="building"/>
+                            <img src="assets/images/projects/building.jpg" alt="building"/>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-
-
-
-
                 <section class="gallery" id="gallery">
                     <div class="container">
                         <div class="gallery__title-holder">
@@ -147,13 +141,21 @@
                         </div>
                         <div class="gallery__list">
                             <div class="gallery__item gallery__item_big">
-                                <a href="#" class="gallery__link" style="background-image: url('../src/assets/image/Gallery/img-360.jpg');"></a>
+                                <a href="#" class="gallery__link" style="background-image: url('/assets/images/Gallery/img-360.jpg');"></a>
                             </div>
                             <div class="gallery__item-holder">
-                                    <div class="gallery__item gallery__item_small"><a href="#" class="gallery__link" style="background-image: url('../src/assets/image/Gallery/1.png');"></a></div>
-                                    <div class="gallery__item gallery__item_small"><a href="#" class="gallery__link" style="background-image: url('../src/assets/image/Gallery/2.jpg');"></a></div>
-                                    <div class="gallery__item gallery__item_small"><a href="#" class="gallery__link" style="background-image: url('../src/assets/image/Gallery/3.png');"></a></div>
-                                    <div class="gallery__item gallery__item_small"><a href="#" class="gallery__link" style="background-image: url('../src/assets/image/Gallery/4.png');"></a></div>
+                                    <div class="gallery__item gallery__item_small">
+                                        <a href="#" class="gallery__link" style="background-image: url('/assets/images/Gallery/1.png');"></a>
+                                    </div>
+                                    <div class="gallery__item gallery__item_small">
+                                        <a href="#" class="gallery__link" style="background-image: url('/assets/images/Gallery/2.jpg');"></a>
+                                    </div>
+                                    <div class="gallery__item gallery__item_small">
+                                        <a href="#" class="gallery__link" style="background-image: url('/assets/images/Gallery/3.png');"></a>
+                                    </div>
+                                    <div class="gallery__item gallery__item_small">
+                                        <a href="#" class="gallery__link" style="background-image: url('/assets/images/Gallery/4.png');"></a>
+                                    </div>
                             </div>
                         </div>
                         <a href="#" class="gallery__btn button">SEE MORE</a>
@@ -196,12 +198,14 @@
                     <div class="container">
                         <div class="footer__wrapper">
                             <div class="footer__row">
-                                <div class="footer__logo"><a href="#"></a><img src="../src/assets/image/logo.svg" alt="logo"></div>
-                                <ul class="footer__social-links">
-                                    <li><a class="footer__item" href="#"><span class="footer__icon icon-instagram"></span></a></li>
-                                    <li><a class="footer__item" href="#"><span class="footer__icon icon-twitter"></span></a></li>
-                                    <li><a class="footer__item" href="#"><span class="footer__icon icon-facebook"></span></a></li>
-                                </ul> 
+                                <div class="footer__logo"><a href="#"></a>
+                                    <img src="/assets/images/logo.svg" alt="logo">
+                                </div>
+                                <ul class="social-links">
+                                    <li><a class="social-links__item" href="#"><span class="fab fa-facebook-f"></span></a></li>
+                                    <li><a class="social-links__item" href="#"><span class="fab fa-twitter"></span></a></li>
+                                    <li><a class="social-links__item" href="#"><span class="fab fa-instagram"></span></a></li>
+                                </ul>
                             </div>
                             <div class="footer__holder">
                                 <span class="footer__copy">Copyrights &#169; 2017 Monticello Group</span>
@@ -211,8 +215,9 @@
                 </div>
                 </section>
             </footer>
+            <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
         <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBlm9M7yI2ZCRv3RcUWOPcSeNR-QXBlcP0&callback=initMap"></script>
-        <script src="../dist/assets/js/main.js"></script>
+        <script src="/assets/js/main.js"></script>
     </body>
 </html>
 

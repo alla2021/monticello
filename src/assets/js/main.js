@@ -1,25 +1,22 @@
-
-  const swiper = new Swiper('.swiper', {
-	// Optional parameters
-	direction: 'vertical',
+// initialize Swiper
+var swiper = new Swiper('.swiper-container', {
+	slidesPerView: 1,
+	spaceBetween: 30,
 	loop: true,
- 
-	// If we need pagination
+	autoplay: {
+	  delay: 3000,
+	  disableOnInteraction: false,
+	},
 	pagination: {
 	  el: '.swiper-pagination',
+	  clickable: true,
 	},
- 
-	// Navigation arrows
 	navigation: {
 	  nextEl: '.swiper-button-next',
 	  prevEl: '.swiper-button-prev',
 	},
- 
-	// And if we need scrollbar
-	scrollbar: {
-	  el: '.swiper-scrollbar',
-	},
  });
+ 
 
 //function initMap() {
 //  new google.maps.Map(document.getElementById("map"), {
@@ -29,12 +26,10 @@
 //  });
 //}
 
-document.addEventListener('DOMContentLoaded', function() {
-	var burgerButton = document.querySelector('.js-burger-btn');
-	var header = document.querySelector('.js-header');
+const hamburger = document.querySelector('.hamburger');
+const menu = document.querySelector('.menu');
 
-	burgerButton.addEventListener('click', function() {
-		header.classList.toggle('active');
-	});
+hamburger.addEventListener('click', () => {
+  hamburger.classList.toggle('active');
+  menu.classList.toggle('active');
 });
-

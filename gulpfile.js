@@ -27,21 +27,21 @@ const path = {
         html: distPath,
         css: distPath + "assets/css/",
         js: distPath + "assets/js/",
-        images: distPath + "assets/img/",
+        images: distPath + "assets/images/",
         fonts: distPath + "assets/fonts/"
     },
     src: {
         html: srcPath + "*.html",
         css: srcPath + "assets/scss/*.scss",
         js: srcPath + "assets/js/*.js",
-        images: srcPath + "assets/image/**/*.{jpg,png,svg,gif,ico,webp,webmanifest,xml,json}",
+        images: srcPath + "assets/images/**/*.{jpg,png,svg,gif,ico,webp,webmanifest,xml,json}",
         fonts:  srcPath + "assets/fonts/**/*.{eot,woff,woff2,ttf,svg}"
     },
     watch: {
         html:   srcPath + "**/*.html",
         js:     srcPath + "assets/js/**/*.js",
         css:    srcPath + "assets/scss/**/*.scss",
-        images: srcPath + "assets/image/**/*.{jpg,png,svg,gif,ico,webp,webmanifest,xml,json}",
+        images: srcPath + "assets/images/**/*.{jpg,png,svg,gif,ico,webp,webmanifest,xml,json}",
         fonts:  srcPath + "assets/fonts/**/*.{eot,woff,woff2,ttf,svg}"
     },
     clean: "./" + distPath
@@ -121,7 +121,7 @@ function js() {
 }
 
 function images() {
-    return src(path.src.images, {base: srcPath + "assets/image/"})
+    return src(path.src.images, {base: srcPath + "assets/images/"})
         .pipe(imagemin([
             imagemin.gifsicle({interlaced: true}),
             imagemin.mozjpeg({quality: 75, progressive: true}),
@@ -138,7 +138,7 @@ function images() {
 }
 
 function webpImages() {
-    return src(path.src.images, {base: srcPath + "assets/image/"})
+    return src(path.src.images, {base: srcPath + "assets/images/"})
         .pipe(imagewebp())
         .pipe(dest(path.build.images));
 }
