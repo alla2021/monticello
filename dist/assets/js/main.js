@@ -12,7 +12,7 @@ var swiper1 = new Swiper('.swiper1', {
 var swiper2 = new Swiper('.swiper2', {
 	direction: 'horizontal',
 	loop: true,
-	spaceBetween: 30,
+	spaceBetween: 20,
 	slidesPerView: 3,
 	centeredSlides: true,
 	breakpoints: {
@@ -22,11 +22,11 @@ var swiper2 = new Swiper('.swiper2', {
 		},
 		800: {
 			slidesPerView: 2,
-			spaceBetween: 20,
+			spaceBetween: 10,
 		},
 		1200: {
 			slidesPerView: 3,
-			spaceBetween: 30,
+			spaceBetween: 20,
 		},
 	},
 	pagination: {
@@ -39,13 +39,13 @@ var swiper2 = new Swiper('.swiper2', {
 	},
 });
 
-//function initMap() {
-//  new google.maps.Map(document.getElementById("map"), {
-//    center: {lat: 48.43306439179746, lng: 34.84722679687054},
-//    zoom: 12,
-//		mapId: '3078384c4f8f2ab9',
-//  });
-//}
+function initMap() {
+  new google.maps.Map(document.getElementById("map"), {
+    center: {lat: 48.43306439179746, lng: 34.84722679687054},
+    zoom: 12,
+		mapId: '3078384c4f8f2ab9',
+  });
+}
 
 const hamburger = document.querySelector('.hamburger');
 const menu = document.querySelector('.menu');

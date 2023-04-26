@@ -57,33 +57,32 @@
     background-color: $white;
     color: black;
     border-radius: 15px;
-    max-width: 350px;
+    max-width: 300px;
     width: 100%;
-    margin: 20px;
+    margin: 0 auto;
   }
-
-
 }
 
-/* Стили для заголовка */
-
-
-/* Стили для слайдера */
 .swiper-container {
-  //width: 100%;
-  min-height: 600px;
+  max-width: 1000px; 
+  width: 100%;
   margin: 0 auto;
+  min-height: 600px;
   position: relative;
   overflow: hidden;
+  padding: 10px;
+}
+
+.swiper-wrapper {
+  width: 100%;
+  padding: 10px;
 }
 
 .swiper-slide {
-
   text-align: center;
+  margin: 0;
 }
 
-
-/* Стили для стрелок */
 .swiper-button-prev,
 .swiper-button-next {
   position: absolute;
