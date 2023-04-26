@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('/assets/fonts/iconfonts/icomoon.eot?hg1xdo');
-  src:  url('/assets/fonts/iconfonts/icomoon.eot?hg1xdo#iefix') format('embedded-opentype'),
-  url('/assets/fonts/iconfonts/icomoon.ttf?hg1xdo') format('truetype'),
-  url('/assets/fonts/iconfonts/icomoon.woff?hg1xdo') format('woff'),
-  url('/assets/fonts/iconfonts/icomoon.svg?hg1xdo#icomoon') format('svg');
+  src:  url('/assets/fonts/iconfonts/icomoon.eot?a8n0j7');
+  src:  url('/assets/fonts/iconfonts/icomoon.eot?a8n0j7#iefix') format('embedded-opentype'),
+    url('/assets/fonts/iconfonts/icomoon.ttf?a8n0j7') format('truetype'),
+    url('/assets/fonts/iconfonts/icomoon.woff?a8n0j7') format('woff'),
+    url('/assets/fonts/iconfonts/icomoon.svg?a8n0j7#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -25,6 +25,18 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-mail:before {
+  content: "\e901";
+}
+.icon-office:before {
+  content: "\e903";
+}
+.icon-compass:before {
+  content: "\e949";
+}
+.icon-alarm:before {
+  content: "\e950";
+}
 .icon-facebook:before {
   content: "\ea90";
 }
@@ -33,4 +45,7 @@
 }
 .icon-twitter:before {
   content: "\ea96";
+}
+.icon-phone:before {
+  content: "\e942";
 }
