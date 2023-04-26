@@ -1,22 +1,43 @@
-// initialize Swiper
-var swiper = new Swiper('.swiper-container', {
-	slidesPerView: 1,
-	spaceBetween: 30,
+var swiper1 = new Swiper('.swiper1', {
+		slidesPerView: 1,
+		spaceBetween: 30,
+		loop: true,
+		autoplay: {
+		delay: 3000,
+		disableOnInteraction: false,
+	},
+});
+
+
+var swiper2 = new Swiper('.swiper2', {
+	direction: 'horizontal',
 	loop: true,
-	autoplay: {
-	  delay: 3000,
-	  disableOnInteraction: false,
+	spaceBetween: 30,
+	slidesPerView: 3,
+	centeredSlides: true,
+	breakpoints: {
+		400: {
+			slidesPerView: 1,
+			spaceBetween: 0,
+		},
+		800: {
+			slidesPerView: 2,
+			spaceBetween: 20,
+		},
+		1200: {
+			slidesPerView: 3,
+			spaceBetween: 30,
+		},
 	},
 	pagination: {
-	  el: '.swiper-pagination',
-	  clickable: true,
+		el: '.swiper-pagination',
+		clickable: true,
 	},
 	navigation: {
-	  nextEl: '.swiper-button-next',
-	  prevEl: '.swiper-button-prev',
+		nextEl: '.swiper-button-next',
+		prevEl: '.swiper-button-prev',
 	},
- });
- 
+});
 
 //function initMap() {
 //  new google.maps.Map(document.getElementById("map"), {
@@ -30,6 +51,6 @@ const hamburger = document.querySelector('.hamburger');
 const menu = document.querySelector('.menu');
 
 hamburger.addEventListener('click', () => {
-  hamburger.classList.toggle('active');
-  menu.classList.toggle('active');
+	hamburger.classList.toggle('active');
+	menu.classList.toggle('active');
 });

@@ -1,7 +1,9 @@
+@charset "UTF-8";
+
 @font-face {
     font-family: "Roboto Medium";
-    src: url("/assets/fonts/Roboto-Medium.eot");
-    src: url("/assets/fonts/Roboto-Medium.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/Roboto-Medium.woff2") format("woff2"), url("/assets/fonts/Roboto-Medium.woff") format("woff"), url("/assets/fonts/Roboto-Medium.ttf") format("truetype"), url("/assets/fonts/Roboto-Medium.svg#Roboto Medium") format("svg");
+  src: url("/assets/fonts/Roboto-Medium.eot");
+  src: url("/assets/fonts/Roboto-Medium.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/Roboto-Medium.woff2") format("woff2"), url("/assets/fonts/Roboto-Medium.woff") format("woff"), url("/assets/fonts/Roboto-Medium.ttf") format("truetype"), url("/assets/fonts/Roboto-Medium.svg#Roboto Medium") format("svg");
 }
 
 @font-face {
@@ -590,6 +592,7 @@
 }
 
 .news {
+    position: relative;
     background-image: url("/assets/images/News/bg-news.jpg");
     background-size: cover;
     background-repeat: no-repeat;
@@ -603,30 +606,20 @@
 }
 
 .news__title {
-    font-size: 44px;
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 50px;
 }
 
-.news__cards-wrapper {
-    display: flex;
-    align-items: center;
-}
-
-.news__card {
-    background-color: #fff;
-    color: black;
-    border-radius: 15px;
-    max-width: 350px;
-    margin: 20px;
-}
-
-.news__slider-item img {
+.news__image img {
     max-width: 100%;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
 }
 
 .news__content {
-    margin-top: 20px;
+    margin-top: 30px;
 }
 
 .news__subtitle {
@@ -650,6 +643,50 @@
 .news__name {
     padding-bottom: 5px;
     font-weight: 800;
+}
+
+.news__card {
+    background-color: #fff;
+    color: black;
+    border-radius: 15px;
+    max-width: 350px;
+    width: 100%;
+    margin: 20px;
+}
+
+/* Стили для заголовка */
+/* Стили для слайдера */
+.swiper-container {
+    min-height: 600px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.swiper-slide {
+    text-align: center;
+}
+
+/* Стили для стрелок */
+.swiper-button-prev,
+.swiper-button-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 70px;
+    height: 70px;
+    color: white;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.swiper-button-prev {
+    left: 50px;
+}
+
+.swiper-button-next {
+    right: 50px;
 }
 
 #map {
