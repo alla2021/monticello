@@ -26,7 +26,7 @@
         @include breakpoint($tablet-bp) {
             font-size: 40px;
         }
-~
+
         @include breakpoint($mobile-bp) {
             margin-bottom: 20px;
         }
@@ -46,7 +46,7 @@
 
     .swiper-container{
         display: flex;
-        align-items: center`;
+        align-items: center;
     }
 
     &__scroll-holder {
