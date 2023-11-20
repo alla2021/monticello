@@ -1,19 +1,8 @@
-# Bhromaon Website
-This is the repository for the Bhromaon website, which can be accessed at https://alla2021.github.io/Bhromaon-website/.
+# Monticello Website
+This is the repository for the Monticello Website, which can be accessed at [link](https://alla2021.github.io/monticello/)
 
 ## Overview
-The Bhromaon website is a simple website created as part of a coding project. It includes information about Bhromaon, a fictional company, and its products.
-
-## Features
-
-The website includes the following features:
-
-Home page with information about Bhromaon and its products
-Product page with detailed information about each product
-Contact page with a form to send messages to Bhromaon
-Responsive design that works on desktop and mobile devices
-
-![bhromaon](https://user-images.githubusercontent.com/75502074/234059524-5d21e621-8a2a-45a7-9aeb-ccc2bbe20882.png)
+Monticello is a simple and modern HTML template designed for showcasing projects, news, and a gallery. It features a clean and responsive design that is easy to customize.
 
 ## Technologies
 The website was created using the following technologies:
@@ -21,8 +10,14 @@ The website was created using the following technologies:
 HTML
 SCSS (with BEM methodology)
 JavaScript
+Glide.js
 
-## Getting Started
-To get started with the website, simply visit https://alla2021.github.io/Bhromaon-website/ in your web browser.
+## Screenshots
 
-To make changes to the website, you can fork the repository and make changes to the files.
+![Screenshot 2023-11-20 183843](https://github.com/alla2021/monticello/assets/75502074/9571c480-c2d8-4221-9ef5-7e675265cc4a)
+
+![Screenshot 2023-11-20 183938](https://github.com/alla2021/monticello/assets/75502074/8adeb851-9819-41d0-8639-c2ed7a12f2f8)
+
+![Screenshot 2023-11-20 183920](https://github.com/alla2021/monticello/assets/75502074/94bf05ea-5570-4cf5-873b-76881cdad747)
+
+![Screenshot 2023-11-20 183909](https://github.com/alla2021/monticello/assets/75502074/72eff894-276a-46d5-9606-cbd62efd5275)
