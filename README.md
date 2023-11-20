@@ -1,18 +1,28 @@
-# Monticello
-This is a sample project for Monticello, a website that showcases some of the architecture and design of Thomas Jefferson's home. The website is built using HTML, CSS, and JavaScript, and includes a responsive design that looks great on all devices.
-Website is deployed on Netlify at https://hilarious-mooncake-342ba5.netlify.app/.
+# Bhromaon Website
+This is the repository for the Bhromaon website, which can be accessed at https://alla2021.github.io/Bhromaon-website/.
+
+## Overview
+The Bhromaon website is a simple website created as part of a coding project. It includes information about Bhromaon, a fictional company, and its products.
 
 ## Features
-- Responsive design that adapts to different screen sizes
-- Gallery view that displays a grid of thumbnail images
-- Lightbox view that allows users to view full-sized images in a modal window
--  menu that links to different sections of the website
-- Contact form that allows users to send a message to the website owner
 
-## Usage
-To use this project, simply visit the deployed website at https://hilarious-mooncake-342ba5.netlify.app/. 
-You can navigate the website using the navigation menu at the top of the page, and view the photographs in the gallery and lightbox views.
+The website includes the following features:
 
-## Screenshots
-![Monticello](https://user-images.githubusercontent.com/75502074/234620026-b17373b2-b8ab-4b2d-9620-50392a2dc0af.png)
-![2023-04-26 18_08_16-Monticello](https://user-images.githubusercontent.com/75502074/234620052-dfe062bd-918c-4d4c-886d-cdea95c69fe1.png)
+Home page with information about Bhromaon and its products
+Product page with detailed information about each product
+Contact page with a form to send messages to Bhromaon
+Responsive design that works on desktop and mobile devices
+
+![bhromaon](https://user-images.githubusercontent.com/75502074/234059524-5d21e621-8a2a-45a7-9aeb-ccc2bbe20882.png)
+
+## Technologies
+The website was created using the following technologies:
+
+HTML
+SCSS (with BEM methodology)
+JavaScript
+
+## Getting Started
+To get started with the website, simply visit https://alla2021.github.io/Bhromaon-website/ in your web browser.
+
+To make changes to the website, you can fork the repository and make changes to the files.

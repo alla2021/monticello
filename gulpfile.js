@@ -1,176 +1,98 @@
-"use strict";
-const {src, dest} = require("gulp");
-const gulp = require("gulp");
-const autoprefixer = require("gulp-autoprefixer");
-const cssbeautify = require("gulp-cssbeautify");
-const removeComments = require('gulp-strip-css-comments');
-const rename = require("gulp-rename");
-const rigger = require("gulp-rigger");
-const sass = require("gulp-sass")(require('sass'));
-const cssnano = require("gulp-cssnano");
-const uglify = require("gulp-uglify");
-const plumber = require("gulp-plumber");
-const panini = require("panini");
-const imagemin = require("gulp-imagemin");
-const del = require("del");
-const notify = require("gulp-notify");
-const imagewebp = require("gulp-webp");
-const browserSync = require("browser-sync").create();
+const gulp = require('gulp');
+const sass = require('gulp-sass')(require('sass'));
+const autoprefixer = require('gulp-autoprefixer');
+const cleanCSS = require('gulp-clean-css');
+const cssnano = require('gulp-cssnano'); // Add this line
+const browserSync = require('browser-sync').create();
+const concat = require('gulp-concat');
+const uglify = require('gulp-uglify');
+const del = require('del');
+const zip = require('gulp-zip');
+const sassLint = require('gulp-sass-lint');
+const notify = require('gulp-notify');
+const plumber = require('gulp-plumber');
 
-/* Paths */
-const srcPath = "src/";
-const distPath = "dist/";
+function liveReload() {
+  browserSync.init({
+    server: './src'
+  })
 
-
-const path = {
-    build: {
-        html: distPath,
-        css: distPath + "assets/css/",
-        js: distPath + "assets/js/",
-        images: distPath + "assets/images/",
-        fonts: distPath + "assets/fonts/"
-    },
-    src: {
-        html: srcPath + "*.html",
-        css: srcPath + "assets/scss/*.scss",
-        js: srcPath + "assets/js/*.js",
-        images: srcPath + "assets/images/**/*.{jpg,png,svg,gif,ico,webp,webmanifest,xml,json}",
-        fonts:  srcPath + "assets/fonts/**/*.{eot,woff,woff2,ttf,svg}"
-    },
-    watch: {
-        html:   srcPath + "**/*.html",
-        js:     srcPath + "assets/js/**/*.js",
-        css:    srcPath + "assets/scss/**/*.scss",
-        images: srcPath + "assets/images/**/*.{jpg,png,svg,gif,ico,webp,webmanifest,xml,json}",
-        fonts:  srcPath + "assets/fonts/**/*.{eot,woff,woff2,ttf,svg}"
-    },
-    clean: "./" + distPath
-};
-
-function serve() {
-    browserSync.init({
-        server: {
-            baseDir: "./" + distPath
-        }
-    });
+  gulp.watch('src/scss/**/*.scss', compileStyles); 
+  gulp.watch('src/script/**/*.js', transpileScript)
+  gulp.watch('src/images/**/*', copyImages);  
+  gulp.watch('src/*.html').on('change', browserSync.reload)
 }
 
-
-function html() {
-    panini.refresh();
-    return src(path.src.html, {base: srcPath})
-        .pipe(plumber())
-        .pipe(dest(path.build.html))
-        .pipe(browserSync.reload({stream: true}));
+function sassLinter (){
+  return src('sass/**/*.scss')
+  .pipe(sassLint({
+    configFile: 'main.scss'
+  }))
+  .pipe(sassLint.format())
+  .pipe(sassLint.failOnError())
 }
 
-function css() {
-        return src(path.src.css, {base: srcPath + "assets/scss/"})
-            .pipe(plumber(
-                {
-                errorHandler : function(err) {
-                    notify.onError({
-                        title:    "SCSS Error",
-                        message:  "Error: <%= error.message %>"
-                    })(err);
-                    this.emit('end');
-                }
-            }
-            ))
-            .pipe(sass())
-            .pipe(autoprefixer())
-            .pipe(cssbeautify())
-            .pipe(dest(path.build.css))
-            .pipe(cssnano({
-                zindex: false,
-                discardComments: {
-                    removeAll: true
-                }
-            }))
-            .pipe(removeComments())
-            .pipe(rename({
-                suffix: ".min",
-                extname: ".css"
-            }))
-            .pipe(dest(path.build.css))
-            .pipe(browserSync.reload({stream: true}));
-    }
-
-function js() {
-    return src(path.src.js, {base: srcPath + "assets/js/"})
-        .pipe(plumber(
-            {
-            errorHandler : function(err) {
-                notify.onError({
-                    title:    "JS Error",
-                    message:  "Error: <%= error.message %>"
-                })(err);
-                this.emit('end');
-            }
-        }
-        ))
-        .pipe(rigger())
-        .pipe(dest(path.build.js))
-        .pipe(uglify())
-        .pipe(rename({
-            suffix: ".min",
-            extname: ".js"
-        }))
-        .pipe(dest(path.build.js))
-        .pipe(browserSync.reload({stream: true}));
+function compileStyles() {
+  return gulp.src('src/scss/main.scss')
+  .pipe(plumber({
+    errorHandler: notify.onError(function (err) {
+      return {
+        title: 'Styles',
+        message: err.message
+      };
+    })
+  }))
+    .pipe(sass())
+    .pipe(gulp.dest('src/css'))
+    .pipe(browserSync.stream())
 }
 
-function images() {
-    return src(path.src.images, {base: srcPath + "assets/images/"})
-        .pipe(imagemin([
-            imagemin.gifsicle({interlaced: true}),
-            imagemin.mozjpeg({quality: 75, progressive: true}),
-            imagemin.optipng({optimizationLevel: 5}),
-            imagemin.svgo({
-                plugins: [
-                    {removeViewBox: true},
-                    {cleanupIDs: false}
-                ]
-            })
-        ]))
-        .pipe(dest(path.build.images))
-        .pipe(browserSync.reload({stream: true}));
+function transpileScript() {
+  return gulp.src(['src/script/*.js', '!src/script/main.js'])
+    .pipe(concat('script.js'))
+    .pipe(gulp.dest('src/js'))
+    .pipe(browserSync.stream());
 }
 
-function webpImages() {
-    return src(path.src.images, {base: srcPath + "assets/images/"})
-        .pipe(imagewebp())
-        .pipe(dest(path.build.images));
+function copyFonts() {
+  return gulp.src('src/fonts/**/*')
+    .pipe(gulp.dest('docs/fonts'));
 }
 
-function fonts() {
-    return src(path.src.fonts, {base: srcPath + "assets/fonts/"})
-    .pipe(dest(path.build.fonts))
-    .pipe(browserSync.reload({stream: true}));
+function buildStyles() {
+  return gulp.src('src/css/*.css')
+    .pipe(autoprefixer())
+    .pipe(cssnano()) // Use cssnano here
+    .pipe(gulp.dest('docs/css'))
 }
 
-function clean() {
-    return del(path.clean);
+function buildScript() {
+  return gulp.src('src/js/*.js')
+    .pipe(uglify())
+    .pipe(gulp.dest('docs/js'))
 }
 
-function watchFiles() {
-    gulp.watch([path.watch.html], html);
-    gulp.watch([path.watch.css], css);
-    gulp.watch([path.watch.js], js);
-    gulp.watch([path.watch.images], images);
-    gulp.watch([path.watch.fonts], fonts);
+function buildHtml() {
+  return gulp.src('src/*.html')
+    .pipe(gulp.dest('docs'))
 }
 
-const build = gulp.series(clean, gulp.parallel(html, css, js, images, webpImages, fonts));
-const watch = gulp.parallel(build, watchFiles, serve);
+function copyImages() {
+  return gulp.src('src/image/**/*')
+    .pipe(gulp.dest('docs/image'));
+}
 
-exports.html = html;
-exports.css = css;
-exports.js = js;
-exports.images = images;
-exports.webpImages = webpImages;
-exports.fonts = fonts;
-exports.clean = clean;
-exports.build = build;
-exports.watch = watch;
-exports.default = watch;
+function cleanUp() {
+  return del('docs')
+}
+
+function archive() {
+  return gulp.src('docs/**/**')
+    .pipe(zip('build.zip'))
+    .pipe(gulp.dest('./'))
+}
+
+exports.default = liveReload;
+exports.scss = compileStyles;
+exports.sassLinter= sassLinter;
+exports.build = gulp.series(cleanUp, gulp.parallel(buildStyles, buildScript, buildHtml, copyImages, copyFonts), archive);

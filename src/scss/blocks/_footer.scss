@@ -1,0 +1,94 @@
+.footer {
+   display:flex;
+   align-items: center;
+   justify-content: center;
+   background-image: url('../../image/Bg-footer.png');
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-position: center;
+   min-height: 500px;
+   display: flex;
+   align-items: center;
+   color: $white;
+
+   &__wrapper {
+      margin: 0 auto;
+      max-width: 850px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      @include breakpoint($tablet-bp) {
+         width: 90%;
+      }
+
+      @include breakpoint($mobile-bp) {
+         width: 90%;
+      }
+   }
+
+   &__row {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      margin-bottom: 40px;
+
+      @include breakpoint($tablet-bp) {
+         display: flex;
+         justify-content: center;
+      }
+
+      @include breakpoint($mobile-bp) {
+         display: flex;
+         justify-content: center;
+         flex-direction: column;
+      }
+   }
+
+   &__holder {
+      text-align: center;
+      display: flex;
+      justify-content: center;
+
+      span {
+         display: block;
+      }
+
+      @include breakpoint($tablet-bp) {
+         display: flex;
+         justify-content: center;
+      }
+
+      @include breakpoint($mobile-bp) {
+         display: flex;
+         justify-content: space-between;
+         flex-direction: column;
+      }
+   }
+
+   &__logo{
+      @include breakpoint($tablet-bp) {
+         margin: 0 auto;
+      }
+
+      @include breakpoint($mobile-bp) {
+         margin: 0 auto;
+      }
+   }
+
+   &__copy {
+   padding-right: 10px;
+   border-right: 1px solid $white;
+   }
+
+   &__author {
+   padding-left: 10px;
+   }
+
+   &__author-link {
+   display: inline;
+   color: $white;
+   }
+}
+
